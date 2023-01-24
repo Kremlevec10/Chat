@@ -2,12 +2,16 @@ package chatapplication.controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import chatapplication.database.pojo.User;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class RegistrationController {
+	
+	User user;
 
     @FXML
     private ResourceBundle resources;
@@ -29,11 +33,13 @@ public class RegistrationController {
 
     @FXML
     void initialize() {
-        assert eMailField != null : "fx:id=\"eMailField\" was not injected: check your FXML file 'registrationSeample.fxml'.";
-        assert loginField != null : "fx:id=\"loginField\" was not injected: check your FXML file 'registrationSeample.fxml'.";
-        assert passwordField != null : "fx:id=\"passwordField\" was not injected: check your FXML file 'registrationSeample.fxml'.";
-        assert registrationButton != null : "fx:id=\"registrationButton\" was not injected: check your FXML file 'registrationSeample.fxml'.";
-
+    	pressRegistrationButton();
     }
 
+	private void pressRegistrationButton() {
+		user = new User();
+		user.saveIntoUser(loginField.getText(), eMailField.getText(), passwordField.getText());
+		System.out.println(user);
+	}
+		
 }

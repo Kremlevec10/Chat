@@ -32,5 +32,18 @@ public class User {
 		this.password = password;
 	}
 	
+	public void saveIntoUser(String login, String eMail, String password) {
+		this.login = login;
+		this.eMail = eMail;
+		this.password = password;
+	}
+
+	@Override
+	public String toString() {
+		return "User [login=" + login + ", eMail=" + eMail + ", password=" + password + "]";
+	}
+	
+	
+	
 
 }
