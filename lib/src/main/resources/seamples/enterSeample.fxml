@@ -14,6 +14,8 @@
             <Button fx:id="enterButton" layoutX="128.0" layoutY="311.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="Войти" />
             <TextField fx:id="eMailField" layoutX="93.0" layoutY="124.0" prefHeight="30.0" prefWidth="220.0" promptText="E@mail" />
             <PasswordField fx:id="passwordField" layoutX="94.0" layoutY="177.0" prefHeight="30.0" prefWidth="220.0" promptText="Password" />
+            <Label fx:id="emailLabel" layoutX="93.0" layoutY="154.0" prefHeight="18.0" prefWidth="220.0" textFill="#7018d6" />
+            <Label fx:id="passwordLabel" layoutX="94.0" layoutY="208.0" prefHeight="18.0" prefWidth="220.0" />
          </children>
       </AnchorPane>
       <Label layoutY="41.0" prefHeight="86.0" prefWidth="400.0" text="Добро пожаловать в наш чат">

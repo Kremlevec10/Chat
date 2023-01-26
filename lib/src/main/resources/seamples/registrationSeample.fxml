@@ -15,6 +15,8 @@
             <TextField fx:id="eMailField" layoutX="93.0" layoutY="69.0" prefHeight="30.0" prefWidth="220.0" promptText="E@mail" />
             <TextField fx:id="loginField" layoutX="94.0" layoutY="121.0" prefHeight="30.0" prefWidth="220.0" promptText="Login" />
             <PasswordField fx:id="passwordField" layoutX="94.0" layoutY="177.0" prefHeight="30.0" prefWidth="220.0" promptText="Password" />
+            <Label fx:id="loginLabel" layoutX="94.0" layoutY="151.0" prefHeight="18.0" prefWidth="220.0" />
+            <Label fx:id="eMailLabel" layoutX="93.0" layoutY="99.0" prefHeight="18.0" prefWidth="220.0" />
          </children>
       </AnchorPane>
       <Label layoutY="41.0" prefHeight="86.0" prefWidth="400.0" text="Добро пожаловать в наш чат">
