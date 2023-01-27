@@ -53,21 +53,15 @@ public class EnterController {
 
 	private void pressEnterButton() {
 		enterButton.setOnAction(event -> {
-			if (checkUser()) {
-				if (checkPasswords()) {
-					enterStage = ApplicationRun.gateStage();
-					FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/seamples/chatSeample.fxml"));
-					try {
-						enterStage.setScene(new Scene(fxmlLoader.load()));
-					} catch (IOException e) {
-						throw new RuntimeException("Не удалось загрузить чат", e);
-					}
-					enterStage.show();
-				} else {
-					System.out.println("Пароль введен не правильно");
+			if (checkUser() && checkPasswords()) {
+				enterStage = ApplicationRun.gateStage();
+				FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/seamples/chatSeample.fxml"));
+				try {
+					enterStage.setScene(new Scene(fxmlLoader.load()));
+				} catch (IOException e) {
+					throw new RuntimeException("Не удалось загрузить чат", e);
 				}
-			} else {
-				System.out.println("Такого пользователя нет");
+				enterStage.show();
 			}
 		});
 	}
